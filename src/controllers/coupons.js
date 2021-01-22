@@ -95,7 +95,18 @@ class Coupons {
             })
     }
     static isExist(req, res) {
-        
+        // const {code} = req.params.code/
+        db().collection('coupons')
+        .findOne({ code: req.params.code })
+        .then((result)=>{
+            if (!result){
+                res.status(404).send('does not exist')
+                return;
+            }
+            res.status(200).send(' exist')
+            
+
+        })
     }
 
 
