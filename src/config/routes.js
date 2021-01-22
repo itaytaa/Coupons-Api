@@ -7,8 +7,9 @@ const Coupons = require('../controllers/coupons')
 routes.put('/coupon',Coupons.create)
 routes.get('/coupon',Coupons.getAll)
 routes.get('/coupon/:id',Coupons.get)
-routes.post('/Coupons/:id',Coupons.update)
-routes.post('/Coupons/:id/redeem',Coupons.redeem)
-routes.delete('/Coupons/:id',Coupons.delete)
+routes.post('/Coupon/:id',Coupons.update)
+routes.post('/Coupon/:id/redeem',Coupons.redeem)
+routes.delete('/Coupon/:id',Coupons.delete)
+routes.delete('/Coupon/:id',Coupons.isExist)
 
 module.exports = routes;

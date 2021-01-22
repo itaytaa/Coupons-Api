@@ -94,6 +94,11 @@ class Coupons {
                 res.status(200).send('coupon has been redeemed')
             })
     }
+    static isExist(req, res) {
+        
+    }
+
+
 }
 
 module.exports = Coupons
